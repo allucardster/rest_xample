@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1>Welcome to Restxample</h1>
+            </div>
+
+            <div id="status">
+                <p>
+                    Just an small example related with RESTful api
+                </p>
+            </div>
+
+            <div id="next">
+                <h2>What's next?</h2>
+                <p>
+                    {% if app.user %}
+                        <a href="{{ path('admin') }}">
+                            Admin Dashboard
+                        </a>
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}">
+                            Login
+                        </a>
+                        <a href="{{ path('fos_user_registration_register') }}">
+                            Register
+                        </a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
