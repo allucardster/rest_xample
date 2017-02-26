@@ -1,7 +1,7 @@
 RESTxample
 ==========
 
-Just an small example related with RESTful api
+Just an small example related with RESTful api with Symfony
 
 Requirements
 ============
@@ -22,9 +22,9 @@ Instalation
 ```
 :~$ cd rest_xample
 :~$ composer install
-:~$ doctrine:schema:update --force
+:~$ app/console doctrine:schema:update --force
 :~$ app/console fos:user:create
-:~$ restxample:oauth-server:create-client --redirect-uri=www.restxampleclient.dev --grant-type=password --grant-type=client_credentials --grant-type=refresh_token
+:~$ app/console restxample:oauth-server:create-client --redirect-uri=www.restxampleclient.dev --grant-type=password --grant-type=client_credentials --grant-type=refresh_token
 ```
 
 Contributors
